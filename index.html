@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora Moderna</title>
+    <link rel="stylesheet" href="./source/styles/main.css">
 </head>
+
 <body>
+    <main id="calculator" class="calculator">
+        <div aria-live="polite" aria-atomic="true" id="screen">
+            <p id="last_operation_history" class="history"></p>
+            <p id="box" class="display">0</p>
+        </div>
+        <div role="grid" id="grid">
+            <button role="button" aria-label="Porcentagem" onclick="calculate_percentage()">%</button>
+            <button role="button" aria-label="Apagar entrada" onclick="clear_entry()">CE</button>
+            <button role="button" aria-label="Apagar tudo" onclick="button_clear()">C</button>
+            <button role="button" aria-label="Apagar" id="backspace_btn" onclick="backspace_remove()">⌫</button>
+            <button role="button" aria-label="Recíproco" onclick="division_one()">¹∕ₓ</button>
+            <button role="button" aria-label="Quadrado" onclick="power_of()">𝑥²</button>
+            <button role="button" aria-label="Raiz quadrada" onclick="square_root()">√𝑥</button>
+            <button role="button" aria-label="Somar" id="plusOp" class="operator" onclick="button_number('+')">+</button>
+            <button role="button" aria-label="7" onclick="button_number(7)">7</button>
+            <button role="button" aria-label="8" onclick="button_number(8)">8</button>
+            <button role="button" aria-label="9" onclick="button_number(9)">9</button>
+            <button role="button" aria-label="Subtrair" id="subOp" class="operator" onclick="button_number('-')">-</button>
+            <button role="button" aria-label="4" onclick="button_number(4)">4</button>
+            <button role="button" aria-label="5" onclick="button_number(5)">5</button>
+            <button role="button" aria-label="6" onclick="button_number(6)">6</button>
+            <button role="button" aria-label="Multiplicar" id="multiOp" class="operator" onclick="button_number('*')">*</button>
+            <button role="button" aria-label="1" onclick="button_number(1)">1</button>
+            <button role="button" aria-label="2" onclick="button_number(2)">2</button>
+            <button role="button" aria-label="3" onclick="button_number(3)">3</button>
+            <button role="button" aria-label="Dividir" id="divOp" class="operator" onclick="button_number('/')">/</button>
+            <button role="button" aria-label="Mudar sinal" onclick="plus_minus()">±</button>
+            <button role="button" aria-label="0" onclick="button_number(0)">0</button>
+            <button role="button" aria-label="Ponto decimal" id="dot" onclick="button_number('.')">.</button>
+            <button role="button" aria-label="Igual" id="equal_sign" class="operator" onclick="button_number('=')">=</button>
+        </div>
+    </main>
     
+    <script src="./source/scripts/main.js"></script>
 </body>
 </html>
